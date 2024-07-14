@@ -1,8 +1,8 @@
 // assets
-import { IconBrandChrome, IconHelp } from '@tabler/icons-react';
+import { IconUsersGroup, IconHelp, IconCurrencyDollar } from '@tabler/icons-react';
 
 // constant
-const icons = { IconBrandChrome, IconHelp };
+const icons = { IconUsersGroup, IconHelp, IconCurrencyDollar };
 
 // ==============================|| SAMPLE PAGE & DOCUMENTATION MENU ITEMS ||============================== //
 
@@ -11,11 +11,19 @@ const other = {
   type: 'group',
   children: [
     {
-      id: 'sample-page',
-      title: 'Sample Page',
+      id: 'members',
+      title: 'Members',
       type: 'item',
-      url: '/sample-page',
-      icon: icons.IconBrandChrome,
+      url: '/members',
+      icon: icons.IconUsersGroup,
+      breadcrumbs: false
+    },
+    {
+      id: 'transactions',
+      title: 'Transactions',
+      type: 'item',
+      url: '/transactions',
+      icon: icons.IconCurrencyDollar,
       breadcrumbs: false
     },
     {
