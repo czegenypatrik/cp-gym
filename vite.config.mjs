@@ -31,7 +31,19 @@ export default defineConfig({
     // this sets a default port to 3000
     port: 3000
   },
-  preview: {
+  build: {
+    chunkSizeWarningLimit: 750,
+    rollupOptions: {
+        output:{
+            manualChunks(id) {
+                if (id.includes('node_modules')) {
+                    return id.toString().split('node_modules/')[1].split('/')[0].toString();
+                }
+            }
+        }
+    }
+},
+preview: {
     // this ensures that the browser opens upon preview start
     open: true,
     // this sets a default port to 3000
